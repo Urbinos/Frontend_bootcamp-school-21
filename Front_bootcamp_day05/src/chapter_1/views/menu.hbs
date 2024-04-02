@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+{{> head title='Menu Page'}}
+
+<body>
+  {{> header}}
+
+  <main class='main'>
+    <div class='container'>
+      <div class="content menu-content">
+        <ul class="list menu-list">
+          {{#each menuItems}}
+          <li class="item menu-item" title="{{ this.description }}">
+            <h3>{{ this.title }}</h3>
+            <p>{{ this.description }}</p>
+            <img src="images/{{ this.picture }}" alt="{{ this.title }}" class="img">
+            <p>Cost: {{ this.cost }}</p>
+            <p>Call quantity: {{ this.callQuantity }}</p>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

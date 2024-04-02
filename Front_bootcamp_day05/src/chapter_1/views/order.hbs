@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+{{> head title=title script="order.js"}}
+
+<body>
+  {{> header}}
+
+  <main class='main'>
+    <div class='container'>
+      <div id={{ order.id }} class="order content order-content">
+        <h2>Order &numero;{{ order.id }}</h2>
+        <p>Waiter: {{ order.userId }}</p>
+        <p>Active: {{ order.isActive }}</p>
+        <div>
+          <h3>Menu: </h3>
+          <ul class="list order-list">
+            {{#each order.items}}
+            <li class="item order-item">
+              <h3>{{ this.title }}</h3>
+              <p>{{ this.description }}</p>
+              <img src="/images/{{ this.picture }}" alt="{{ this.title }}" class="img">
+              <p>Cost: {{ this.cost }}</p>
+              <p>Call quantity: {{ this.callQuantity }}</p>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+        <p>Total amount: {{ this.totalAmount }}&#8381;</p>
+        {{#if order.isActive}}
+        <button class='btn' id="close-btn" data-id="{{ order.id }}">Close Order</button>
+        {{/if}}
+      </div>
+  </main>
+</body>
+
+</html>

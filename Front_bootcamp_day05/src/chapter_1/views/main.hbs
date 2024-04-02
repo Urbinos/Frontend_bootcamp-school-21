@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+{{> head title='Main Page' script="main.js"}}
+
+<body>
+  {{> header}}
+
+  <main class='main'>
+    <div class='container'>
+      {{title}}
+      <div class="content main-content">
+        <form action="" class="form main-form">
+          <label for="waiter">Waiter</label>
+          <select id="waiter" name="waiter" class="select" required>
+            <option value="" selected>Select waiter id</option>
+            {{#each waiters}}
+            <option value="{{ this.id }}">{{ this.name }}</option>
+            {{/each}}
+          </select>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <ul id="main-orders" class="list order-list"></ul>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
