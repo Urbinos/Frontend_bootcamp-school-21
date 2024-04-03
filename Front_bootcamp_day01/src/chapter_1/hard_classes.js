@@ -46,11 +46,11 @@
 
 import { Employee } from "./classes
 
-1. Св-ва:
-- companyName
-- currentProjects - текущий пулл проектов. Массив экземпляров класса Project
-- completedProjects - пулл завершенных проектов. Массив экземпляров класса Project
-- staff - весь пулл сотрудников компании. Это объект, у которого есть поля Developers, Managers. В этих полях лежат массивы экземпляров аналогичных классов.
+// 1. Св-ва:
+// - companyName
+// - currentProjects - текущий пулл проектов. Массив экземпляров класса Project
+// - completedProjects - пулл завершенных проектов. Массив экземпляров класса Project
+// - staff - весь пулл сотрудников компании. Это объект, у которого есть поля Developers, Managers. В этих полях лежат массивы экземпляров аналогичных классов.
 /* Св-ва и методы класса
 companyName - string
 currentProjects - Массив экземпляров класса Project
