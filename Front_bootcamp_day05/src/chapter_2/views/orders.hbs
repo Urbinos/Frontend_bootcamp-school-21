@@ -1,0 +1,36 @@
+<div class="content orders-content">
+  {{#each orders}}
+  {{this.items}}
+  {{/each}}
+  {{#if isAdmin}}
+  <p>Sorry, you're not allowed to access this page</p>
+  <p><a href="/menu">Go see menu, idk</a></p>
+  {{else}}
+  <form id="order-form" action="" class="form order-form">
+
+    <label for="waiter">Waiter</label>
+    <select id="waiter" name="waiter" class="select" required>
+      <option value="" selected>Select waiter id</option>
+      {{#each waiters}}
+      <option value="{{ this.id }}">{{ this.id }}</option>
+      {{/each}}
+    </select>
+
+    <p>Menu item</p>
+    <div class="menu-items">
+      {{#each menuItems}}
+      <div>
+        <input type="checkbox" id='menu-item-{{ this.id }}' title="{{ this.description }}" value="{{ this.id }}">
+        <label for='menu-item-{{ this.id }}'>{{ this.title }}</label>
+        </input>
+      </div>
+      {{/each}}
+    </div>
+    <div class="btn-container">
+      <input type="reset" value="Reset" class="btn">
+      <button type="submit" class="btn">Submit</button>
+    </div>
+  </form>
+  {{/if}}
+</div>
+<script src="../public/js/orders.js"></script>

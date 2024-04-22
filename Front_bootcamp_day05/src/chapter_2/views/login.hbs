@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <div class="wrapper--header">
+    <h2 class="header--title">
+      Login to Web App
+    </h2>
+  </div>
+  <div class="wrapper--box">
+    <form method="POST" class="box--form">
+      <input
+        type="text"
+        name="username"
+        id="name"
+        placeholder="Username"
+        class="form--input"
+      />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        class="form--input"
+      />
+      <div class="error-message" style="color: red;"></div>
+      <div class="form--button-wrapper">
+        <div style="display: flex; gap: 0.5rem; align-items: center ">
+          <p>
+            New to our game?
+          </p>
+          <a href="/signup" style="color: blue;">
+            Create an account
+          </a>
+        </div>
+      </div>
+      <button type="submit" class="btn form--button">
+        Sign In
+      </button>
+    </form>
+  </div>
+</div>  

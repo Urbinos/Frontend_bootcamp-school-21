@@ -1,0 +1,58 @@
+<div class="wrapper">
+    <div class="wrapper--header">
+        <h2 class="header--title">
+            Sign Up to Web App
+        </h2>
+    </div>
+    <div class="wrapper--box">
+        <form action="/signup" method="POST" class="box--form">
+            <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Username"
+                    class="form--input"
+            />
+            <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    class="form--input"
+            />
+            <input
+                    type="password"
+                    name="confirm"
+                    placeholder="Confirm Password"
+                    class="form--input"
+            />
+            <div>
+                <label for="role">
+                    Role:
+                </label>
+                <select id="role" name="role" class="form--input">
+                    <option value="waiter">
+                        Waiter
+                    </option>
+                    <option value="admin">
+                        Admin
+                    </option>
+                </select>
+            </div>
+            <div class="error-message" style="color: red;"></div>
+            <div class="form--button-wrapper">
+                <div style="display: flex; gap: 0.5rem; align-items: center ">
+                    <p>
+                        Already have an account?
+                    </p>
+                    <a href="/signin" style="color: blue;">
+                        Sign In
+                    </a>
+                </div>
+            </div>
+            <button type="submit" class="btn form--button">
+                Sign Up
+            </button>
+        </form>
+    </div>
+</div>

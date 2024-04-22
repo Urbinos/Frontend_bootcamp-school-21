@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <link rel='stylesheet' type="text/css" href='/css/style.css' />
+</head>
+
+<body>
+  <header class='header'>
+    <div class='container'>
+      <div class='header-content'>
+        <a href="/"><img src='/images/logo.jpg' alt='s21_logo' class='header-logo' /></a>
+        <div class='title'>
+          <h1>Restaurant</h1>
+          <span>by mamiemal, 2024</span>
+        </div>
+        <nav class='nav header-nav'>
+          <ul class='nav-list'>
+            <li class='nav-list-item'>
+              <a href='/' aria-current="page">
+                Main
+              </a>
+            </li>
+            <li class='nav-list-item'>
+              <a href='/orders'>
+                Orders
+              </a>
+            </li>
+            <li class='nav-list-item'>
+              <a href='/menu'>
+                Menu
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a href="/logout" class='btn' id='logout-btn'>Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <main class='main'>
+    <div class='container'>
+      {{{body}}}
+    </div>
+  </main>
+</body>
+
+</html>

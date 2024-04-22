@@ -1,0 +1,57 @@
+<div class="content main-content">
+  {{#if isWaiter}}
+    <p>
+      Welcome, waiter
+    </p>
+    {{#if hasOrders}}
+      <p>
+        You have orders
+      </p>
+      <ul id="main-orders" class="list order-list">
+        {{#each orders}}
+          <li class="item order-item">
+            <h2>
+              Order &numero;{{this.id}}
+            </h2>
+            <p>
+              Waiter: {{this.userId}}
+            </p>
+            <p>
+              Active: {{this.isActive}}
+            </p>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p>
+        You don't have orders, work harder!
+      </p>
+      <p>
+        You can
+        <a href="/orders">
+          create
+        </a>
+        one
+      </p>
+    {{/if}}
+  {{else}}
+    <p>
+      Welcome, admin
+    </p>
+    <ul id="main-orders" class="list order-list">
+      {{#each orders}}
+        <li class="item order-item">
+          <h2>
+            Order &numero;{{this.id}}
+          </h2>
+          <p>
+            Waiter: {{this.userId}}
+          </p>
+          <p>
+            Active: {{this.isActive}}
+          </p>
+        </li>
+      {{/each}}
+    </ul>
+  {{/if}}
+</div>
