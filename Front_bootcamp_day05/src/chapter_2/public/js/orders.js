@@ -20,8 +20,8 @@ if (!orderForm) {
         items: checkedBoxes,
         isActive: true,
       };
-
-      try {
+ 
+       try {
         const response = await fetch('/api/orders', {
           method: 'POST',
           headers: {
